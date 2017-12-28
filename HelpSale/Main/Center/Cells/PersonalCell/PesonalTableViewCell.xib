@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PesonalTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="48.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帮卖订单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qep-dD-reC">
+                        <rect key="frame" x="40" y="14" width="65.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="w5r-Ef-dw6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.38823529411764707" green="0.396078431372549" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure Indicator" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-of-hnV">
+                        <rect key="frame" x="302" y="18" width="8" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="AsL-nr-KPU"/>
+                            <constraint firstAttribute="height" constant="13" id="cqf-kK-DY8"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ZH-uH-iUq">
+                        <rect key="frame" x="60" y="48.5" width="260" height="0.5"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="4dk-e2-wzk"/>
+                        </constraints>
+                    </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(认证通过后即可对商品进行出价)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpb-Rp-oJK">
+                        <rect key="frame" x="108.5" y="17.5" width="180.5" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="jQu-OM-PqG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.78039215689999997" green="0.61568627450000002" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wpb-Rp-oJK" firstAttribute="leading" secondItem="qep-dD-reC" secondAttribute="trailing" constant="3" id="82R-my-cCM"/>
+                    <constraint firstItem="wpb-Rp-oJK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Cxb-nm-4oQ"/>
+                    <constraint firstAttribute="trailing" secondItem="G2M-of-hnV" secondAttribute="trailing" constant="10" id="HpO-fz-qKL"/>
+                    <constraint firstItem="3ZH-uH-iUq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="KAD-50-GW0"/>
+                    <constraint firstItem="G2M-of-hnV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MW9-uY-BtV"/>
+                    <constraint firstItem="qep-dD-reC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="tQP-kn-ur9"/>
+                    <constraint firstAttribute="bottom" secondItem="3ZH-uH-iUq" secondAttribute="bottom" id="whn-07-14l"/>
+                    <constraint firstAttribute="trailing" secondItem="3ZH-uH-iUq" secondAttribute="trailing" id="wxY-bw-Ez9"/>
+                    <constraint firstItem="qep-dD-reC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ysM-05-cZD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contenLabel" destination="wpb-Rp-oJK" id="Plf-bO-dxQ"/>
+                <outlet property="disclosureImage" destination="G2M-of-hnV" id="oEc-UJ-qPf"/>
+                <outlet property="titleLabel" destination="qep-dD-reC" id="NaC-23-IMc"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="53.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Disclosure Indicator" width="8" height="13"/>
+    </resources>
+</document>

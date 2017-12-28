@@ -1,0 +1,159 @@
+//
+//  HelpSale.pch
+//  HelpSale
+//
+//  Created by 朱标 on 2017/8/12.
+//  Copyright © 2017年 朱标. All rights reserved.
+//
+
+#ifndef HelpSale_pch
+#define HelpSale_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* HelpSale_pch */
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#define REDPACKET_AVALABLE
+
+#ifdef __OBJC__
+
+
+//屏幕高度
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//屏幕高度
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <MBProgressHUD.h>
+#import <MJRefresh.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <AFNetworking/AFNetworking.h>
+#import <IQKeyboardManager.h>
+#import "UIColor+RGBHelper.h"
+#import "AppStyle.h"
+#import "UserDetaiModel.h"
+#import "HSUserDetaiModel.h"
+#import <SDCycleScrollView.h>
+#import "UIView+STTLoadingView.h"
+#import "UIViewExt.h"
+#import "GlobalUtils.h"
+#import "HMDataManager.h"
+#import "UIImage+RotateImage.h"
+
+#define LRWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define LRStrongSelf(type)  __strong typeof(type) type = weak##type;
+
+
+
+//上传图片给七牛
+#define qiniu_API "http://up-z2.qiniu.com"
+//获取上传图片的票据
+#define get_qiniu_token_API @"Apiv1/Qiniu/get_qiniu_token"
+//首页接口
+#define acution_index_API @"buyerv1/acution/index"
+//获取分类
+#define get_category_list_API @"apiv1/Category/get_category_list"
+//首页显示距离下一波拍卖会开始时间接口
+#define get_next_time_acution_API @"buyerv1/acution/get_next_time_acution"
+//首页分类筛选接口
+#define get_acution_list_by_category_API @"buyerv1/acution/get_acution_list_by_category"
+//拍品详情信息接口
+#define get_goods_detail_API @"buyerv1/goods/get_goods_detail"
+//出价接口
+#define add_offer_API @"buyerv1/acution/add_offer"
+//修改出价接口
+#define edit_offer_API @"buyerv1/acution/edit_offer"
+ #define DEMO_CALL 1
+//上传图片给七牛
+#define qiniu_API "http://up-z2.qiniu.com"
+//获取上传图片的票据
+#define get_qiniu_token_API @"Apiv1/Qiniu/get_qiniu_token"
+//首页接口
+#define acution_index_API @"buyerv1/acution/index"
+//获取分类
+#define get_category_list_API @"apiv1/Category/get_category_list"
+//首页显示距离下一波拍卖会开始时间接口
+#define get_next_time_acution_API @"buyerv1/acution/get_next_time_acution"
+//首页分类筛选接口
+#define get_acution_list_by_category_API @"buyerv1/acution/get_acution_list_by_category"
+//拍品详情信息接口
+#define get_goods_detail_API @"buyerv1/goods/get_goods_detail"
+//出价接口
+#define add_offer_API @"buyerv1/acution/add_offer"
+//修改出价接口
+#define edit_offer_API @"buyerv1/acution/edit_offer"
+//修改用户信息
+#define change_user_info_API @"Apiv1/User/change_user_info"
+//更换手机的第一次短信
+#define change_phone_one_code @"Apiv1/Sendsms/change_phone_one_code"
+//更换手机第二次短信
+#define change_phone_two_code @"Apiv1/Sendsms/change_phone_two_code"
+//修改登录的手机号
+#define change_user_phone @"Apiv1/User/change_user_phone"
+//我的出价记录接口
+#define my_offer_record @"buyerv1/acution/my_offer_record"
+//我的收货地址列表接口
+#define get_address_list_API @"buyerv1/user/get_address_list"
+//设置默认收货地址接口
+#define set_default_address_API @"buyerv1/user/set_default_address"
+//用户收货地址添加接口
+#define add_address_API @"buyerv1/user/add_address"
+//用户收货地址修改接口
+#define edit_address_API @"buyerv1/user/edit_address"
+//地址-删除接口
+#define delete_address_API @"buyerv1/user/delete_address"
+//用户保证金信息接口
+#define get_my_deposit_API @"buyerv1/user/get_my_deposit"
+//用户的保证金收支记录接口
+#define get_user_deposit_list_API @"buyerv1/user/get_user_deposit_list"
+//申请提现操作接口
+#define apply_deposit_API @"buyerv1/user/apply_deposit"
+//买家成交订单接口
+#define get_acution_already_list_API @"buyerv1/goods/get_acution_already_list"
+//家确认收货接口
+#define confirm_express_API @"buyerv1/acution/confirm_express"
+//获得拍卖会物流信息接口
+#define get_express_info_API @"buyerv1/acution/get_express_info"
+//获取系统推送的消息
+#define get_push_record_list_API @"Apiv1/Rongyun/get_push_record_list"
+//买家确认收货接口
+#define confirm_express_API @"buyerv1/acution/confirm_express"
+//我的默认地址
+#define get_default_address @"buyerv1/user/get_default_address"
+//
+#define pay_acution_API @"buyerv1/acution/pay_acution"
+//用户收货地址修改接口
+#define edit_address_API @"buyerv1/user/edit_address"
+//用户收货地址添加接口
+#define add_address_API @"buyerv1/user/add_address"
+//在线留言提交接口
+#define linemessage_add_API @"apiv1/linemessage/add"
+//卖家确认收货
+#define confirm_recaption_API @"sellerv1/Goods/confirm_recaption"
+//获得默认银行账号
+#define get_default_account @"apiv1/Bankaccount/get_default_account"
+//获得子分类
+#define get_child_category @"apiv1/category/get_child_category"
+//获取用户的登录token
+#define get_user_login_token @"Apiv1/Rongyun/get_user_login_token"
+//获取未读系统消息的数量
+#define get_unread_push_record_nums @"Apiv1/Rongyun/get_unread_push_record_nums"
+//获取最后一条系统消息
+#define get_last_system_record @"apiv1/Rongyun/get_last_system_record"
+//是否有新的商品上拍
+#define check_new_acution @"buyerv1/acution/check_new_acution"
+//获取认证资料
+#define get_veryfy_material @"apiv1/Veryfybuyer/get_veryfy_material"
+//保证金支付订单提交接口
+#define create_order @"buyerv1/order/create_order"
+//获取会麦收款账号信息
+#define get_huimai_account @"apiv1/attribute/get_huimai_account"
+//相机示例图
+#define camera_image @"apiv1/category/camera_image"
+
+#endif

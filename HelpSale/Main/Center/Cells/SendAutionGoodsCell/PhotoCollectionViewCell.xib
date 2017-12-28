@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrB-Sr-wqw">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xl5-vj-NRK">
+                        <rect key="frame" x="84" y="0.0" width="16" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="ncM-MP-At6"/>
+                            <constraint firstAttribute="height" constant="16" id="vM4-qg-Qww"/>
+                        </constraints>
+                        <state key="normal" image="delphot"/>
+                    </button>
+                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3sk-AI-jOJ">
+                        <rect key="frame" x="5" y="88" width="90" height="2"/>
+                        <color key="tintColor" red="0.57647058819999997" green="0.46274509800000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </progressView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3sk-AI-jOJ" secondAttribute="bottom" constant="10" id="T0m-f1-nVB"/>
+                <constraint firstItem="rrB-Sr-wqw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gIN-3s-l7P"/>
+                <constraint firstAttribute="trailing" secondItem="rrB-Sr-wqw" secondAttribute="trailing" id="gfs-Qc-mrx"/>
+                <constraint firstAttribute="trailing" secondItem="Xl5-vj-NRK" secondAttribute="trailing" id="j0l-uk-wPv"/>
+                <constraint firstAttribute="bottom" secondItem="rrB-Sr-wqw" secondAttribute="bottom" id="ksC-OF-I5L"/>
+                <constraint firstAttribute="trailing" secondItem="3sk-AI-jOJ" secondAttribute="trailing" constant="5" id="meR-VY-GZZ"/>
+                <constraint firstItem="Xl5-vj-NRK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sNJ-ra-Hdp"/>
+                <constraint firstItem="3sk-AI-jOJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="yzq-cE-H8m"/>
+                <constraint firstItem="rrB-Sr-wqw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zCr-Ou-z1w"/>
+            </constraints>
+            <connections>
+                <outlet property="TitleImage" destination="rrB-Sr-wqw" id="1t6-kv-c74"/>
+                <outlet property="deleteBtn" destination="Xl5-vj-NRK" id="EjG-Mi-1NP"/>
+                <outlet property="loadingView" destination="3sk-AI-jOJ" id="Dy9-RB-jpt"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delphot" width="16" height="16"/>
+    </resources>
+</document>

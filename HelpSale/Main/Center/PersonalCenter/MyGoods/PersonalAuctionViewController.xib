@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalAuctionViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V03-Mz-swK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veD-Ig-Mgt">
+                            <rect key="frame" x="12" y="30" width="16" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="Ly7-Zo-xw9"/>
+                                <constraint firstAttribute="height" constant="22" id="jwh-R9-igF"/>
+                            </constraints>
+                            <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="backClick:" destination="-1" eventType="touchUpInside" id="j2M-a6-O6X"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的拍品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQp-x4-U4C">
+                            <rect key="frame" x="48" y="30" width="73.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="exL-A5-yg2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.019607843137254902" green="0.023529411764705882" blue="0.20392156862745098" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="69" id="73A-1C-rET"/>
+                        <constraint firstItem="hQp-x4-U4C" firstAttribute="centerY" secondItem="veD-Ig-Mgt" secondAttribute="centerY" id="YZ4-MF-voN"/>
+                        <constraint firstItem="veD-Ig-Mgt" firstAttribute="leading" secondItem="V03-Mz-swK" secondAttribute="leading" constant="12" id="fwd-en-Mwn"/>
+                        <constraint firstAttribute="bottom" secondItem="veD-Ig-Mgt" secondAttribute="bottom" constant="17" id="iNj-9X-i6D"/>
+                        <constraint firstItem="hQp-x4-U4C" firstAttribute="leading" secondItem="veD-Ig-Mgt" secondAttribute="trailing" constant="20" id="zfS-3E-Jgs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="V03-Mz-swK" secondAttribute="trailing" id="gSd-MM-Fkg"/>
+                <constraint firstItem="V03-Mz-swK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gtB-uV-Khc"/>
+                <constraint firstItem="V03-Mz-swK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="waG-vQ-Hq4"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="16" height="14"/>
+    </resources>
+</document>

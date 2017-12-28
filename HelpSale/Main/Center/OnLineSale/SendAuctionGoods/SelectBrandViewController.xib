@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectBrandViewController">
+            <connections>
+                <outlet property="mainTableView" destination="JOa-Zf-yC8" id="mNT-AA-jg6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIh-hv-eVs">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-nd-JrD">
+                            <rect key="frame" x="12" y="30" width="16" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="Y7w-iz-cCi"/>
+                                <constraint firstAttribute="width" constant="16" id="o5z-u2-NYu"/>
+                            </constraints>
+                            <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="backClick:" destination="-1" eventType="touchUpInside" id="lCR-Dv-5Ix"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择品牌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-Mo-qHz">
+                            <rect key="frame" x="48" y="31" width="73.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="qpb-7Y-8sz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.019607843140000001" green="0.023529411760000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Zie-nd-JrD" firstAttribute="leading" secondItem="CIh-hv-eVs" secondAttribute="leading" constant="12" id="lO6-jq-afG"/>
+                        <constraint firstAttribute="bottom" secondItem="Zie-nd-JrD" secondAttribute="bottom" constant="17" id="q2i-Xo-fcr"/>
+                        <constraint firstItem="WtB-Mo-qHz" firstAttribute="leading" secondItem="Zie-nd-JrD" secondAttribute="trailing" constant="20" id="sig-LN-iHW"/>
+                        <constraint firstAttribute="height" constant="69" id="tjg-RN-i2I"/>
+                        <constraint firstItem="WtB-Mo-qHz" firstAttribute="centerY" secondItem="Zie-nd-JrD" secondAttribute="centerY" id="vkP-83-hy4"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="JOa-Zf-yC8">
+                    <rect key="frame" x="0.0" y="69" width="375" height="598"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bwq-Us-bxq"/>
+                        <outlet property="delegate" destination="-1" id="oqu-57-3a0"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CIh-hv-eVs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="09x-At-eoJ"/>
+                <constraint firstAttribute="bottom" secondItem="JOa-Zf-yC8" secondAttribute="bottom" id="1g1-2B-FPb"/>
+                <constraint firstItem="JOa-Zf-yC8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ANI-ZQ-0dv"/>
+                <constraint firstItem="JOa-Zf-yC8" firstAttribute="top" secondItem="CIh-hv-eVs" secondAttribute="bottom" id="MNh-zu-58K"/>
+                <constraint firstAttribute="trailing" secondItem="JOa-Zf-yC8" secondAttribute="trailing" id="QDY-FB-RBB"/>
+                <constraint firstItem="CIh-hv-eVs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nJ5-o0-Gv2"/>
+                <constraint firstAttribute="trailing" secondItem="CIh-hv-eVs" secondAttribute="trailing" id="vLd-QX-t2U"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="16" height="14"/>
+    </resources>
+</document>

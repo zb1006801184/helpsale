@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SaleGoodsDetaiThreeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="91.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出价记录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luy-lS-kfE">
+                        <rect key="frame" x="12" y="6" width="57.5" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="hYg-gH-aeb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moresbt" translatesAutoresizingMaskIntoConstraints="NO" id="7Gs-at-Qtv">
+                        <rect key="frame" x="296" y="6" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="BIJ-VO-oSp"/>
+                            <constraint firstAttribute="height" constant="12" id="bOe-Di-Hp1"/>
+                        </constraints>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="47i-JP-TZX">
+                        <rect key="frame" x="10" y="28" width="310" height="57.5"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nGC-4e-GjM">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="20K-Tz-s8G"/>
+                            <outlet property="delegate" destination="-1" id="VQd-lG-nbY"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Gs-at-Qtv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="3Y3-nP-hqb"/>
+                    <constraint firstItem="Luy-lS-kfE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="7zl-Cd-wrz"/>
+                    <constraint firstItem="47i-JP-TZX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="BWq-K4-8z5"/>
+                    <constraint firstAttribute="trailing" secondItem="7Gs-at-Qtv" secondAttribute="trailing" constant="12" id="FyL-UL-XjX"/>
+                    <constraint firstItem="Luy-lS-kfE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="KaG-lH-oqc"/>
+                    <constraint firstAttribute="bottom" secondItem="47i-JP-TZX" secondAttribute="bottom" constant="6" id="diK-J4-cUn"/>
+                    <constraint firstItem="47i-JP-TZX" firstAttribute="top" secondItem="Luy-lS-kfE" secondAttribute="bottom" constant="8" id="vR9-74-Zlc"/>
+                    <constraint firstAttribute="trailing" secondItem="47i-JP-TZX" secondAttribute="trailing" id="vYa-YS-BJq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="mainCollectionView" destination="47i-JP-TZX" id="WoP-Wk-gg6"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="moresbt" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpSaleOrderViewController">
+            <connections>
+                <outlet property="mainTableView" destination="XHW-s7-pzr" id="HkO-Se-CcX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qye-c8-PtH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5y2-jv-ptu">
+                            <rect key="frame" x="12" y="30" width="16" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="wne-hh-utT"/>
+                                <constraint firstAttribute="height" constant="22" id="yru-kw-RjY"/>
+                            </constraints>
+                            <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="backClick:" destination="-1" eventType="touchUpInside" id="rUR-80-Kni"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帮卖订单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkX-Rs-jhT">
+                            <rect key="frame" x="48" y="30.5" width="73.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="B72-V7-g2e"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.019607843137254902" green="0.023529411764705882" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="5y2-jv-ptu" firstAttribute="leading" secondItem="qye-c8-PtH" secondAttribute="leading" constant="12" id="Iuf-IJ-JPo"/>
+                        <constraint firstAttribute="height" constant="69" id="JdS-g8-0CP"/>
+                        <constraint firstItem="tkX-Rs-jhT" firstAttribute="centerY" secondItem="5y2-jv-ptu" secondAttribute="centerY" id="K8y-iZ-Nt8"/>
+                        <constraint firstItem="tkX-Rs-jhT" firstAttribute="leading" secondItem="5y2-jv-ptu" secondAttribute="trailing" constant="20" id="T4S-Fm-Jbv"/>
+                        <constraint firstAttribute="bottom" secondItem="5y2-jv-ptu" secondAttribute="bottom" constant="17" id="sGy-Zt-LR7"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="XHW-s7-pzr">
+                    <rect key="frame" x="0.0" y="69" width="375" height="598"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bPQ-Fh-7kp"/>
+                        <outlet property="delegate" destination="-1" id="lG0-Kr-mjn"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XHW-s7-pzr" firstAttribute="top" secondItem="qye-c8-PtH" secondAttribute="bottom" id="1in-Tf-qTr"/>
+                <constraint firstItem="XHW-s7-pzr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="41G-hE-F9x"/>
+                <constraint firstAttribute="trailing" secondItem="qye-c8-PtH" secondAttribute="trailing" id="91z-NV-Ufn"/>
+                <constraint firstItem="qye-c8-PtH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="R6o-y5-djD"/>
+                <constraint firstItem="qye-c8-PtH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WVy-cw-HBp"/>
+                <constraint firstAttribute="bottom" secondItem="XHW-s7-pzr" secondAttribute="bottom" id="bh4-qt-L6k"/>
+                <constraint firstAttribute="trailing" secondItem="XHW-s7-pzr" secondAttribute="trailing" id="cak-CP-2NI"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="16" height="14"/>
+    </resources>
+</document>
